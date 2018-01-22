@@ -1,0 +1,16 @@
+C:\Users\Olivia\Dysk Google\Studia\INŻYNIERKA\Snake4Players\Snake\bin\Release\Snake.exe.config
+C:\Users\Olivia\Dysk Google\Studia\INŻYNIERKA\Snake4Players\Snake\bin\Release\Snake.exe.manifest
+C:\Users\Olivia\Dysk Google\Studia\INŻYNIERKA\Snake4Players\Snake\bin\Release\Snake.application
+C:\Users\Olivia\Dysk Google\Studia\INŻYNIERKA\Snake4Players\Snake\bin\Release\Snake.exe
+C:\Users\Olivia\Dysk Google\Studia\INŻYNIERKA\Snake4Players\Snake\bin\Release\Snake.pdb
+C:\Users\Olivia\Dysk Google\Studia\INŻYNIERKA\Snake4Players\Snake\obj\Release\Snake.csprojResolveAssemblyReference.cache
+C:\Users\Olivia\Dysk Google\Studia\INŻYNIERKA\Snake4Players\Snake\obj\Release\Snake.GameFormm.resources
+C:\Users\Olivia\Dysk Google\Studia\INŻYNIERKA\Snake4Players\Snake\obj\Release\Snake.MainMenu.resources
+C:\Users\Olivia\Dysk Google\Studia\INŻYNIERKA\Snake4Players\Snake\obj\Release\Snake.Menu_Settings.resources
+C:\Users\Olivia\Dysk Google\Studia\INŻYNIERKA\Snake4Players\Snake\obj\Release\Snake.Properties.Resources.resources
+C:\Users\Olivia\Dysk Google\Studia\INŻYNIERKA\Snake4Players\Snake\obj\Release\Snake.csproj.GenerateResource.Cache
+C:\Users\Olivia\Dysk Google\Studia\INŻYNIERKA\Snake4Players\Snake\obj\Release\Snake.csproj.CoreCompileInputs.cache
+C:\Users\Olivia\Dysk Google\Studia\INŻYNIERKA\Snake4Players\Snake\obj\Release\Snake.exe.manifest
+C:\Users\Olivia\Dysk Google\Studia\INŻYNIERKA\Snake4Players\Snake\obj\Release\Snake.application
+C:\Users\Olivia\Dysk Google\Studia\INŻYNIERKA\Snake4Players\Snake\obj\Release\Snake.exe
+C:\Users\Olivia\Dysk Google\Studia\INŻYNIERKA\Snake4Players\Snake\obj\Release\Snake.pdb

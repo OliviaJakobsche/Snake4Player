@@ -1,0 +1,471 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{770841A9-9C03-46C7-9D78-7D5A7A9F3BE5}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Snake</RootNamespace>
+    <AssemblyName>Snake</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>C:\deploy\Snake\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>4AF699DA08EA7CF6953E7AACA0201B2B3E36FC38</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>Snake_TemporaryKey.pfx</ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>true</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>true</SignManifests>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Board.cs" />
+    <Compile Include="GameFormm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GameFormm.Designer.cs">
+      <DependentUpon>GameFormm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Menu_Settings.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Menu_Settings.Designer.cs">
+      <DependentUpon>Menu_Settings.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Piece.cs" />
+    <Compile Include="Food.cs" />
+    <Compile Include="MainMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainMenu.Designer.cs">
+      <DependentUpon>MainMenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Settings.cs" />
+    <Compile Include="Snake.cs" />
+    <Compile Include="Wall.cs" />
+    <EmbeddedResource Include="GameFormm.resx">
+      <DependentUpon>GameFormm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainMenu.resx">
+      <DependentUpon>MainMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Menu_Settings.resx">
+      <DependentUpon>Menu_Settings.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <None Include="Snake_TemporaryKey.pfx" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bggrass.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon_apple.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\green-squares.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\banana.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\apple2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1player.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\2players.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\3players.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\4players.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\4playersA.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\QuitGame.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SettingsA.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pause..png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\green.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\red.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\white.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\yellow.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\green1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\green2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\green3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\green4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\greenS.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\player2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\red1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\red2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\red3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\red4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\redS.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\violet.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\violet1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\violet2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\violet3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\violet4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\violetS.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\white1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\white2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\white3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\white4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\whiteS.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\yellow1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\yellow2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\yellow3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\yellow4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\yellowS.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\blue1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\blue2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\blue3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\blue4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\blueS.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\wall.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\levels.xml">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\chilli.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\eggplant.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\strawberry.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mode_free.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mode_free_a.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mode_time.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mode_time_a.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mode_versus.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mode_versus_a.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\quit_game.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\quit_game_a.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\settings.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\settings_a.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\settingsaa.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\snake.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\snake-md.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\apple.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\coollogo_com-12834322.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\coollogo_com-34797457.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\coollogo_com-167715026.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\coollogo_com-167774468.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\coollogo_com-265721643.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\coollogo_com-311911273.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\coollogo_com-311971007.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\main.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\snake2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\snake3 %282%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\snake3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\game_over1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\game_over2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Plants_vs_Zombies_-_Roof_Stage.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\punch.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\collect.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\settings_2_a.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\settings_1_a.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\settings_ON_a.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\settings_OFF_a.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\settings_OFF.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\settings_ON.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\settings_more.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\settings_less.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\settings_3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\settings_2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\settings_1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\settings_sound.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\settings_players.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\settings_4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\settings_4_a.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\settings_back.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\settings_back_a.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\settings_settings.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\settings_3_a.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Resources\static_heart.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.5.2">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.5.2 %28x86 i x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
